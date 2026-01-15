@@ -184,16 +184,16 @@
                     return;
                 }
             }
-            // dash DRM
-            // if (responseUpper.includes("<MPD") && responseUpper.includes("</MPD>")) {
-            //     _postMessage({
-            //         action: "catCatchDashDRMMedia",
-            //         url: this.responseURL,
-            //         data: this.response,
-            //         href: location.href
-            //     });
-            //     return;
-            // }
+             dash DRM
+             if (responseUpper.includes("<MPD") && responseUpper.includes("</MPD>")) {
+                 _postMessage({
+                     action: "catCatchDashDRMMedia",
+                    url: this.responseURL,
+                     data: this.response,
+                    href: location.href
+                });
+                 return;
+             }
             const isJson = isJSON(this.response);
             if (isJson) {
                 findMedia(isJson);
